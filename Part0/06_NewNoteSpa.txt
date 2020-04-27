@@ -1,0 +1,20 @@
+note over browser
+User enters note and cilcks submit button.
+end note
+
+note over browser
+Javascript code on the browser appends the note to notes list, 
+renderes the page.
+end note
+
+note over browser
+browser sends the note to server
+end note
+
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+
+note over server
+server saves the note and sends response 201 created
+end note
+
+server-->browser: HTTP 201 Created, {"message":"note created"}
